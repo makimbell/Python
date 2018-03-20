@@ -7,7 +7,7 @@ class bot:
         initializes promptlist and responselist
         '''
         try:
-            filename = open("responselist.lol",'r')
+            filename = open("responselist.txt",'r')
             lines = filename.readlines()
             filename.close()
 
@@ -142,7 +142,7 @@ def main():
         user = computer.userin()
         
         if user == "bye":
-            filename = open("responselist.lol",'w')
+            filename = open("responselist.txt",'w')
             for element in computer.promptlist:
                 filename.write(element + "\n")
             filename.write("***\n")
